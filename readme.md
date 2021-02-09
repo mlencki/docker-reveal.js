@@ -21,7 +21,7 @@ version: "3.8"
 services:
     reveal.js:
         container_name: reveal.js
-        image: mlencki/reveal.js-docker:latest
+        image: ghcr.io/mlencki/reveal.js-docker
         environment:
             PRESENTATION_PATH: path_to_my_presentation
         ports:
