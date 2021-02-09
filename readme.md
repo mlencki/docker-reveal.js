@@ -7,10 +7,13 @@ Ready to use docker image for serving [reveal.js](https://github.com/hakimel/rev
 Slides can be served with `docker run` command:
 
 ```
-docker run -p 8888:8000 -v path_to_your_presentations_directory:/app/presentations --env PRESENTATION_PATH="path_to_active_presentation" ghcr.io/mlencki/reveal.js-docker
+docker run -p 8888:8000 \
+    -v path_to_your_presentations_directory:/app/presentations \
+    --env PRESENTATION_PATH="path_to_active_presentation" \
+    ghcr.io/mlencki/reveal.js-docker
 ```
 
-or with docker-compose:
+or with `docker-compose`:
 
 ```
 version: "3.8"
@@ -26,6 +29,3 @@ services:
         volumes:
             - ./:/app/presentations
 ```
-
-open:\
-`localhost:8888`
